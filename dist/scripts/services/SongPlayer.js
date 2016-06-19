@@ -79,6 +79,8 @@
 		*/
 		SongPlayer.currentTime = null;
 
+		SongPlayer.volume = 30;
+
 		/**
 		* @function play
 		* @desc Checks if currentSong is same as song just clicked on and plays song
@@ -149,6 +151,12 @@
 		SongPlayer.setCurrentTime = function(time) {
 			if (currentBuzzObject) {
 				currentBuzzObject.setTime(time);
+			}
+		};
+
+		SongPlayer.setVolume = function(volume) {
+			if (currentBuzzObject) {
+				currentBuzzObject.setVolume(volume);
 			}
 		};
 
